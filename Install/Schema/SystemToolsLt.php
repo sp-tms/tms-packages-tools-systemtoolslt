@@ -22,7 +22,7 @@ class SystemToolsLt
                     ]
                 ),
                 new Column(
-                    'first_name',
+                    'name',
                     [
                         'type'          => Column::TYPE_VARCHAR,
                         'size'          => 50,
@@ -30,11 +30,18 @@ class SystemToolsLt
                     ]
                 ),
                 new Column(
-                    'last_name',
+                    'capacity',
                     [
                         'type'          => Column::TYPE_VARCHAR,
                         'size'          => 50,
                         'notNull'       => true,
+                    ]
+                ),
+                new Column(
+                    'uom',
+                    [
+                        'type'          => Column::TYPE_INTEGER,
+                        'notNull'       => false,
                     ]
                 )
             ],
@@ -42,7 +49,8 @@ class SystemToolsLt
                 new Index(
                     'column_UNIQUE',
                     [
-                        'last_name'
+                        'name',
+                        'capacity'
                     ],
                     'UNIQUE'
                 )
@@ -50,20 +58,6 @@ class SystemToolsLt
             'options' => [
                 'TABLE_COLLATION' => 'utf8mb4_general_ci'
             ]
-        ];
-    }
-
-    public function indexes()
-    {
-        return
-        [
-            new Index(
-                'column_INDEX',
-                [
-                    'first_name'
-                ],
-                'INDEX'
-            )
         ];
     }
 }

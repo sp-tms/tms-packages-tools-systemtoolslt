@@ -8,7 +8,9 @@ class AppsTmsSystemToolsLt extends BaseModel
 {
     public $id;
 
-    public $first_name;
+    public $name;
 
-    public $last_name;
+    public $capacity;
+
+    public $uom;
 }
