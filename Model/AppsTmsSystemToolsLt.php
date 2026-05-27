@@ -10,7 +10,11 @@ class AppsTmsSystemToolsLt extends BaseModel
 
     public $name;
 
+    public $description;
+
     public $capacity;
 
     public $uom;
+
+    public $archived;
 }

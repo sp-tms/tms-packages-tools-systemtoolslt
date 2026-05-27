@@ -30,10 +30,17 @@ class SystemToolsLt
                     ]
                 ),
                 new Column(
-                    'capacity',
+                    'description',
                     [
                         'type'          => Column::TYPE_VARCHAR,
-                        'size'          => 50,
+                        'size'          => 2048,
+                        'notNull'       => false,
+                    ]
+                ),
+                new Column(
+                    'capacity',
+                    [
+                        'type'          => Column::TYPE_INTEGER,
                         'notNull'       => true,
                     ]
                 ),
@@ -43,7 +50,14 @@ class SystemToolsLt
                         'type'          => Column::TYPE_INTEGER,
                         'notNull'       => false,
                     ]
-                )
+                ),
+                new Column(
+                    'archived',
+                    [
+                        'type'          => Column::TYPE_BOOLEAN,
+                        'notNull'       => true,
+                    ]
+                ),
             ],
             'indexes' => [
                 new Index(
